@@ -136,6 +136,12 @@ namespace compute.geometry
             {
                 app.MapGet(endpoint.PathURL, endpoint.Get);
             }
+
+            //TODO:REMOVE
+            TEST.TEST.Initialize();
+            app.MapGet("LoadGLB", TEST.TEST.LoadGLB);
+            app.MapGet("LoadFBX", TEST.TEST.LoadFBX);
+            app.MapGet("Load3DM", TEST.TEST.Load3DM);
         }
 
         static async Task SdkEndpoint(HttpContext context, IEndpointRouteBuilder app)
